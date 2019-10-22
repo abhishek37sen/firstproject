@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+<html>
+<head>
+    <title>Services Page</title>
+</head>
+<body>
+{% block content %}
+    <style>
+    th,td{
+        padding: 10px 20px;
+        text-align: center;
+    }
+    </style>
+{% if services %}
+    <center>
+    <table border="2px">
+    <thead>
+        <tr>
+            <th>Course id</th>
+            <th>Course name</th>
+            <th>Course duration </th>
+            <th>Course start date</th>
+            <th>Course start time</th>
+            <th>Course trainer name</th>
+            <th>Course trainer exp</th>
+        </tr>
+    </thead>
+        {% for i in services %}
+            <tbody>
+            <tr>
+                <td>{{ i.course_id }}</td>
+                <td>{{ i.course_name }}</td>
+                <td>{{ i.course_duration }}</td>
+                <td>{{ i.course_start_date }}</td>
+                 <td>{{ i.course_start_time }}</td>
+                <td>{{ i.course_trainer_name }}</td>
+                <td>{{ i.course_trainer_exp }}</td>
+            </tr>
+            </tbody>
+        {% endfor %}
+    </table>
+    </center>
+{% else %}
+        <h1>no course are avaliable NOw</h1>
+{% endif %}
+
+{% endblock %}
+
+</body>
+</html>

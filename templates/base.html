@@ -1,0 +1,33 @@
+{% load staticfiles %}
+<html>
+<head>
+    <title>DurgaSoft</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+    <link href="{% static 'css/base.css'%}" rel="stylesheet">
+</head>
+
+<body background="{% static 'images/img.jpg' %}">
+<nav>
+    <ul class="menu">
+        <li class="menu_item"><a href="/home/">Home</a></li>
+        <li class="menu_item"><a href="/services/">Services</a></li>
+        <li class="menu_item"><a href="/enquiry/">Enquriy</a></li>
+        <li class="menu_item"><a href="/gallery/">Gallery</a></li>
+        <li class="menu_item"><a href="/feedback/">Feedback</a></li>
+    </ul>
+    <h3>Office Timeing 8:00 am to 7:00 pm</h3>
+</nav><br>
+<h1 style="text-align: center; color: red">Welcome to A..aaa SoftWare Solution PVT Limited </h1>
+{% block content %}
+
+{% endblock %}
+<footer>
+    <h5 id="footerh1">&copy; Copy Rights by Narayana</h5>
+</footer>
+</body>
+</html>
